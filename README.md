@@ -15,6 +15,15 @@ Features:
 * copy `.env.example` to `.env` and set your vars 
 * make all scripts executable with `chmod +x *.sh`
 
+## Setup on remote server for automation without password by using ssh key
+* login to remote server
+* $```ssh-keygen```
+* choose ```~/.ssh/id_rsa_borg``` as saving key
+* ```cat ~/.ssh/id_rsa_borg.pub```
+* copy and paste above ```id_rsa_borg.pub``` into your backup server ```~/.ssh/authorized_keys```
+* do not forget to set permissions directory and file ``` chmod 700 ~/.ssh; chmod 600 ~/.ssh/authorized_keys ```
+
+
 ### Initialize
 * run `borg-init.sh` to intialize remote repo 
 * the repo will be setup with the passphrase configured in `.env`
