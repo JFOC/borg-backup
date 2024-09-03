@@ -9,6 +9,7 @@ eval $(cat ${DIR}'/.env' | sed -e '/^#/d;/^\s*$/d' -e 's/\(\w*\)[ \t]*=[ \t]*\(.
 set +o allexport
 
 # Setting this, so the repo does not need to be given on the commandline:
+export BORG_RSH=${ENV_BORG_RSH}
 export BORG_REPO=${ENV_BORG_REPO}
 # See the section "Passphrase notes" for more infos.
 export BORG_PASSPHRASE=${ENV_BORG_PASSPHRASE}
