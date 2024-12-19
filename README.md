@@ -25,6 +25,9 @@ Features:
 
 
 ### Initialize
+* wget `https://github.com/borgbackup/borg/releases/download/1.2.8/borg-linuxold64`
+* chmod +x `borg-linuxold64`
+* cp `borg-linuxold64` `/usr/local/bin/borg`
 * run `borg-init.sh` to intialize remote repo 
 * the repo will be setup with the passphrase configured in `.env`
 * the encryption key will be copied to the current directory - please store it in secure location and remove it
